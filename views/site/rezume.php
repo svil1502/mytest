@@ -40,7 +40,8 @@ use yii\helpers\Html;
             <b>Опыт работы:</b>
 <ul>
    <li><a href="http://gipdivan.ru/">сайт на WP</a></li>
-    <li><a href="http://ilin.itcrk.ru/shop2/web/">Тестовый магазин автозапчастей на Yii2</a>, логин rezume, пароль rezume, <a href="https://github.com/svil1502/shop">Проект на github</a>
+    <li><a href="http://ilin.itcrk.ru/shop2/web/">Тестовый магазин автозапчастей на Yii2</a>, логин rezume, пароль rezume,
+        <a href="https://github.com/svil1502/shop">Проект на github</a>
     </li>
 <li><a href="https://www.youtube.com/watch?v=sdTRMnS1ajI">Видео приложения на Delphi</a></li>
     <li><a href="https://github.com/svil1502">Практика на github java, php </a></li>
@@ -59,7 +60,7 @@ use yii\helpers\Html;
     <b><a href="https://syktyvkar.hh.ru/resume/784203cdff03e0f8710039ed1f304f53446752">Резюме на hh.ru</a></b>
 
 </p>
-            <a><a href="https://vk.com/id176599710">Моя Страница ВКонтакте</a></b>
+            <b><a href="https://vk.com/id176599710">Моя Страница ВКонтакте</a></b>
             </div>
 
     </div>

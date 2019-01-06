@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Books;
-use app\models\Auth;
+use app\models\Auth as AuthAlias;
 use app\models\Setup;
 use app\models\BooksSearch;
 use yii\web\Controller;
@@ -40,7 +40,7 @@ class BooksController extends Controller
     {
         $searchModel = new BooksSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $data_ = Auth::find()->all();
+        $data_ = AuthAlias::find()->all();
         foreach ($data_ as $value) {
            $data[$value->id]=$value->name;
         }
@@ -72,7 +72,7 @@ class BooksController extends Controller
     public function actionCreate()
     {
         $model = new Books();
-        $data_ = Auth::find()->all();
+        $data_ = AuthAlias::find()->all();
         foreach ($data_ as $value) {
             $data[$value->id]=$value->name;
         }
@@ -95,7 +95,7 @@ class BooksController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $data_ = Auth::find()->all();
+        $data_ = AuthAlias::find()->all();
 
         foreach ($data_ as $value) {
             $data[$value->id]=$value->name;
