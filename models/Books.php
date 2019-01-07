@@ -61,7 +61,7 @@ class Books extends \yii\db\ActiveRecord
      */
     public function getAuth()
     {
-        return $this->hasOne(auth::className(), ['id' => 'auth_id']);
+        return $this->hasOne(Auth::className(), ['id' => 'auth_id']);
     }
 
     /* Геттер для имени автора */
