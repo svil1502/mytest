@@ -33,6 +33,7 @@ AppAsset::register($this);
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
+
         ],
     ]);
     echo Nav::widget([
@@ -43,10 +44,14 @@ AppAsset::register($this);
             ['label' => 'Книги', 'url' => ['/books/index']],
             ['label' => 'Добавить книгу', 'url' => ['/books/create']],
             ['label' => 'Допзадание', 'url' => ['/site/dz']],
-            ['label' => 'Проект на github', 'url' => ['/site/rezume']],
+            ['label' => 'Проект на github', 'url' => 'https://github.com/svil1502/mytest/'],
             ['label' => 'Резюме', 'url' => ['/site/rezume']],
         ],
     ]);
+
+
+
+
     NavBar::end();
     ?>
 
