@@ -82,7 +82,7 @@ class BooksSearch extends Books
 
         $query->andFilterWhere(['like', 'title', $this->title]);
         $query->joinWith(['auth' => function ($q) {
-            $q->where('Auth.name LIKE "%' . $this->authName . '%"');
+            $q->where('auth.name LIKE "%' . $this->authName . '%"');
         }]);
         return $dataProvider;
     }

@@ -8,7 +8,7 @@ use yii\helpers\Html;
         <div class="col-lg-8">
         <div class="col-1-3">
 
-            <?= Html::img('@web/foto.jpg', ['alt' => 'Фото']) ?>
+            <?= Html::img('/mytest/web/foto.jpg', ['alt' => 'Фото']) ?>
         </div>
         <div class="col-2-3">
             <h3>Резюме</h3>

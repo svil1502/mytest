@@ -16,6 +16,8 @@ use Yii;
  */
 class Books extends \yii\db\ActiveRecord
 {
+    protected $primaryKey = 'id';
+
     /**
      * {@inheritdoc}
      */
@@ -59,12 +61,12 @@ class Books extends \yii\db\ActiveRecord
      */
     public function getAuth()
     {
-        return $this->hasOne(Auth::className(), ['id' => 'auth_id']);
+        return $this->hasOne(auth::className(), ['id' => 'auth_id']);
     }
 
     /* Геттер для имени автора */
     public function getAuthName() {
-        return $this->auth->name;
+        return $this->Auth->name;
     }
 
 

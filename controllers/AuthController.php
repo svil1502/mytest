@@ -35,6 +35,9 @@ class AuthController extends Controller
      */
     public function actionIndex()
     {
+
+
+
         $searchModel = new AuthSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 

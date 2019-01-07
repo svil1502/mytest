@@ -36,7 +36,7 @@ class Auth extends \yii\db\ActiveRecord
         [
             ['birthday'],
             'match',
-            'pattern' => '/^([^4-9]{1}[0-9]{1}\/[^2-9]{1}[0-2]{1}\/\d{2})+$/',
+            'pattern' => '/^([^4-9]{1}[0-9]{1}\/[^2-9]{1}[0-9]{1}\/\d{2})+$/',
             'message' =>'Ошибка в дате dd/mm/yy'
         ],
 
