@@ -8,7 +8,7 @@ use yii\helpers\Html;
         <div class="col-lg-8">
         <div class="col-1-3">
 
-            <?= Html::img('/mytest/web/foto.jpg', ['alt' => 'Фото']) ?>
+            <?= Html::img('/mytest/web/foto.jpg', ['class'=>'photocard'] , ['alt' => 'Фото']) ?>
         </div>
         <div class="col-2-3">
             <h3>Резюме</h3>
@@ -36,7 +36,7 @@ use yii\helpers\Html;
     <div class="row">
         <div class="col-1-14">
             <b>Ключевые знания и навыки:</b>
-            <p>MySQL, HTML, CSS, JS, JQuery, PHP, Yii2, Delphi, Java, CMS WP</p>
+            <p>MySQL, HTML, CSS, JS, JQuery, PHP, Yii2, Delphi, Java, CMS WP, GIT</p>
             <b>Опыт работы:</b>
 <ul>
    <li><a href="http://gipdivan.ru/">сайт на WP</a></li>

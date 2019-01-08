@@ -148,3 +148,12 @@ a.desc:after {
     float: left;
 
 }
+
+.photocard {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+
+    border-radius: 10px;
+    box-shadow: 0 0 5px #0000FF;
+}
