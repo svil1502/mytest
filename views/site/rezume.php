@@ -8,14 +8,14 @@ use yii\helpers\Html;
         <div class="col-lg-8">
         <div class="col-1-3">
 
-            <?= Html::img('/mytest/web/foto.jpg', ['class'=>'photocard'] , ['alt' => 'Фото']) ?>
+            <?= Html::img('@web/foto.jpg', ['class'=>'photocard'] , ['alt' => 'Фото']) ?>
         </div>
         <div class="col-2-3">
             <h3>Резюме</h3>
 
             <p>Ильина Светлана</p>
 
-            <p>Желаемая должность junior PHP (yii2)</p>
+            <p>Желаемая должность: junior PHP (yii2)</p>
 
             <p>Дата рождения: 15.02.1971</p>
 
@@ -35,9 +35,9 @@ use yii\helpers\Html;
 
     <div class="row">
         <div class="col-1-14">
-            <b>Ключевые знания и навыки:</b>
+            <p class="otstup">Ключевые знания и навыки:</p>
             <p>MySQL, HTML, CSS, JS, JQuery, PHP, Yii2, Delphi, Java, CMS WP, GIT</p>
-            <b>Опыт работы:</b>
+            <p class="otstup">Опыт работы:</p>
 <ul>
    <li><a href="http://gipdivan.ru/">сайт на WP</a></li>
     <li><a href="http://ilin.itcrk.ru/shop2/web/">Тестовый магазин автозапчастей на Yii2</a>, логин rezume, пароль rezume,
@@ -47,7 +47,7 @@ use yii\helpers\Html;
     <li><a href="https://github.com/svil1502">Практика на github java, php </a></li>
 </ul>
 
-            <b>Образование:</b>
+            <p class="otstup">Образование:</p>
            <p> 1989-1995 Тверской государственный университет, специальность "Правоведение", опыт работы юристом - 23 года
            </p>
           <p>  2015-2019 Сыктывкарский лесной институт, специальность "Информационные системы и технологии",
