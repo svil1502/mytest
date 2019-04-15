@@ -43,7 +43,7 @@ AppAsset::register($this);
             ['label' => 'Добавить автора', 'url' => ['/auth/create']],
             ['label' => 'Книги', 'url' => ['/books/index']],
             ['label' => 'Добавить книгу', 'url' => ['/books/create']],
-            ['label' => 'Допзадание', 'url' => ['/site/dz']],
+
             ['label' => 'Проект на github', 'url' => 'https://github.com/svil1502/mytest/'],
             ['label' => 'Резюме', 'url' => ['/site/rezume']],
         ],
@@ -56,12 +56,52 @@ AppAsset::register($this);
     ?>
 
     <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+
+
+        <div class="header-bottom"><!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+
+                                <li><a href="<?= \yii\helpers\Url::to(['companies/index']) ?>">Компании</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['requisites/index']) ?>">Реквизиты</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['contracts/index']) ?>">Договоры</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['acts/index']) ?>">Акты</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['bills/index']) ?>">Счета</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="search_box pull-right">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+        </header><!--/header-->
+        <div class="container">
+            <?= $content ?>
+        </div>
+
+
     </div>
+
+
+
+
 </div>
 
 <footer class="footer">

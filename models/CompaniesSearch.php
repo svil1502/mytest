@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Auth;
+use app\models\Companies;
 
 /**
- * AuthSearch represents the model behind the search form of `app\models\Auth`.
+ * CompaniesSearch represents the model behind the search form of `app\models\Companies`.
  */
-class AuthSearch extends Auth
+class CompaniesSearch extends Companies
 {
     /**
      * {@inheritdoc}
@@ -18,8 +18,7 @@ class AuthSearch extends Auth
     {
         return [
             [['id'], 'integer'],
-            [['name', 'birthday'], 'safe'],
-
+            [['name'], 'safe'],
         ];
     }
 
@@ -41,7 +40,7 @@ class AuthSearch extends Auth
      */
     public function search($params)
     {
-        $query = Auth::find();
+        $query = Companies::find();
 
         // add conditions that should always apply here
 
@@ -60,7 +59,6 @@ class AuthSearch extends Auth
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'birthday' => $this->birthday,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name]);

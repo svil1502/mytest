@@ -171,3 +171,7 @@ a.desc:after {
 #w2 ul + li .active a {
     color: green;
 }
+
+#my_id {
+    display: none;
+}

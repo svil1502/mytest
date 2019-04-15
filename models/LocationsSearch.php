@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Auth;
+use app\models\Locations;
 
 /**
- * AuthSearch represents the model behind the search form of `app\models\Auth`.
+ * LocationsSearch represents the model behind the search form of `app\models\Locations`.
  */
-class AuthSearch extends Auth
+class LocationsSearch extends Locations
 {
     /**
      * {@inheritdoc}
@@ -17,9 +17,8 @@ class AuthSearch extends Auth
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['name', 'birthday'], 'safe'],
-
+            [['location_id'], 'integer'],
+            [['zip_code', 'city', 'province'], 'safe'],
         ];
     }
 
@@ -41,7 +40,7 @@ class AuthSearch extends Auth
      */
     public function search($params)
     {
-        $query = Auth::find();
+        $query = Locations::find();
 
         // add conditions that should always apply here
 
@@ -59,11 +58,12 @@ class AuthSearch extends Auth
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'birthday' => $this->birthday,
+            'location_id' => $this->location_id,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name]);
+        $query->andFilterWhere(['like', 'zip_code', $this->zip_code])
+            ->andFilterWhere(['like', 'city', $this->city])
+            ->andFilterWhere(['like', 'province', $this->province]);
 
         return $dataProvider;
     }

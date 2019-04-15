@@ -85,6 +85,7 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+
 //для gii
          //  'enablePrettyUrl' => false,
          //   'showScriptName' => true,

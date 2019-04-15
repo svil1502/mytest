@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Auth;
+use app\models\Customers;
 
 /**
- * AuthSearch represents the model behind the search form of `app\models\Auth`.
+ * CustomersSearch represents the model behind the search form of `app\models\Customers`.
  */
-class AuthSearch extends Auth
+class CustomersSearch extends Customers
 {
     /**
      * {@inheritdoc}
@@ -17,9 +17,8 @@ class AuthSearch extends Auth
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['name', 'birthday'], 'safe'],
-
+            [['customer_id'], 'integer'],
+            [['customer_name', 'zip_code', 'city', 'province'], 'safe'],
         ];
     }
 
@@ -41,7 +40,7 @@ class AuthSearch extends Auth
      */
     public function search($params)
     {
-        $query = Auth::find();
+        $query = Customers::find();
 
         // add conditions that should always apply here
 
@@ -59,11 +58,13 @@ class AuthSearch extends Auth
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'birthday' => $this->birthday,
+            'customer_id' => $this->customer_id,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name]);
+        $query->andFilterWhere(['like', 'customer_name', $this->customer_name])
+            ->andFilterWhere(['like', 'zip_code', $this->zip_code])
+            ->andFilterWhere(['like', 'city', $this->city])
+            ->andFilterWhere(['like', 'province', $this->province]);
 
         return $dataProvider;
     }
